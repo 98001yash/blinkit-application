@@ -15,6 +15,7 @@ import java.util.List;
 public class OrderDto {
 
     private Long id;
+    private Long userId;
     private String customerName;
     private String status;
     private List<OrderItemDto> orderItems;

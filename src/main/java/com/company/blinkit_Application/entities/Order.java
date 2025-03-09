@@ -23,12 +23,14 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "user_id",nullable = false)
-    private User customer;
+    private User user;
 
     private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
+    private String customerName;
 
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
