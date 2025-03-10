@@ -1,6 +1,7 @@
 package com.company.blinkit_Application.entities;
 
 
+import com.company.blinkit_Application.enums.PaymentMethod;
 import com.company.blinkit_Application.enums.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,6 +29,10 @@ public class Payment {
 
     @Enumerated(EnumType.STRING)
     private PaymentStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private PaymentMethod paymentMethod;
+
     private String transactionId;
     private LocalDateTime paymentDate;
 }

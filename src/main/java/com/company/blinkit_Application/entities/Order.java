@@ -32,6 +32,8 @@ public class Order {
 
     private String customerName;
 
+    public Double totalAmount;
+
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
